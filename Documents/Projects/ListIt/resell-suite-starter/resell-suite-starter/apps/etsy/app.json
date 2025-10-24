@@ -1,35 +1,22 @@
 {
   "expo": {
-    "name": "Reseller Suite",
-    "slug": "reseller-suite",
+    "name": "ResellSnap",
+    "slug": "resellsnap",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "sdkVersion": "51.0.0",
+    "platforms": ["ios", "android"],
     "ios": {
-      "bundleIdentifier": "com.mego10.resellersuite",
-      "supportsTablet": true,
-      "jsEngine": "jsc"
+      "bundleIdentifier": "com.mego10.resellsnap"
     },
     "android": {
-      "package": "com.mego10.resellersuite",
-      "adaptiveIcon": {
-        "backgroundColor": "#ffffff"
-      },
-      "jsEngine": "jsc"
+      "package": "com.mego10.resellsnap"
     },
     "extra": {
       "eas": {
         "projectId": "f65785d6-4835-4f67-bf36-89b191144c83"
       }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/f65785d6-4835-4f67-bf36-89b191144c83"
     }
   }
 }
