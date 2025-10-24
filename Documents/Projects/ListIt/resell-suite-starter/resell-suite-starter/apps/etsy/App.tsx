@@ -1,67 +1,56 @@
 
 import React from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function App() {
-  const [message, setMessage] = React.useState<string | null>(null);
+  const [message, setMessage] = React.useState('Welcome to ResellSnap!');
 
-  async function fetchTest() {
-    try {
-      const res = await fetch('http://localhost:4000/api/listings');
-      const json = await res.json();
-      setMessage(`Loaded: ${json.title} for ${json.price} ${json.currency}`);
-    } catch (e) {
-      setMessage('Could not reach backend. Is it running on :4000?');
-    }
+  function handlePress() {
+    setMessage('Button pressed! App is working correctly.');
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.title}>ResellSnap – etsy</Text>
-        <TouchableOpacity 
-          style={styles.button} 
-          onPress={fetchTest}
-        >
-          <Text style={styles.buttonText}>Start Listing</Text>
-        </TouchableOpacity>
-        {message ? <Text style={styles.message}>{message}</Text> : null}
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text style={styles.title}>ResellSnap – Etsy</Text>
+      <TouchableOpacity style={styles.button} onPress={handlePress}>
+        <Text style={styles.buttonText}>Start Listing</Text>
+      </TouchableOpacity>
+      <Text style={styles.message}>{message}</Text>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#ffffff',
-  },
-  content: {
-    alignItems: 'center',
   },
   title: {
-    fontSize: 24,
-    fontWeight: '600',
-    marginBottom: 20,
+    fontSize: 28,
+    fontWeight: 'bold',
     color: '#000000',
+    marginBottom: 30,
+    textAlign: 'center',
   },
   button: {
     backgroundColor: '#007AFF',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 8,
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    borderRadius: 10,
     marginBottom: 20,
   },
   buttonText: {
-    color: 'white',
-    fontWeight: '600',
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   message: {
-    marginTop: 10,
-    color: '#000000',
+    fontSize: 16,
+    color: '#333333',
     textAlign: 'center',
+    marginTop: 20,
   },
 });
