@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Reseller Suite",
+    "slug": "reseller-suite",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "jsEngine": "jsc"
+    },
+    "android": {
+      "package": "com.mego10.resellersuite",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "jsEngine": "jsc"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f65785d6-4835-4f67-bf36-89b191144c83"
+      }
+    }
+  }
+}

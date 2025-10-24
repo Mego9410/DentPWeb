@@ -1,0 +1,37 @@
+
+import React from 'react';
+import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+
+export default function App() {
+  const [message, setMessage] = React.useState<string | null>(null);
+
+  async function fetchTest() {
+    try {
+      const res = await fetch('http://localhost:4000/api/listings');
+      const json = await res.json();
+      setMessage(`Loaded: ${json.title} for ${json.price} ${json.currency}`);
+    } catch (e) {
+      setMessage('Could not reach backend. Is it running on :4000?');
+    }
+  }
+
+  return (
+    <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+      <View style={{ gap: 16, alignItems: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: '600' }}>ResellSnap – etsy</Text>
+        <TouchableOpacity 
+          style={{ 
+            backgroundColor: '#007AFF', 
+            paddingHorizontal: 20, 
+            paddingVertical: 10, 
+            borderRadius: 8 
+          }} 
+          onPress={fetchTest}
+        >
+          <Text style={{ color: 'white', fontWeight: '600' }}>Start Listing</Text>
+        </TouchableOpacity>
+        {message ? <Text style={{ marginTop: 10 }}>{message}</Text> : null}
+      </View>
+    </SafeAreaView>
+  );
+}
