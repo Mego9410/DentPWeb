@@ -7,6 +7,11 @@ node_modules/
 dist/
 web-build/
 
+# Expo development
+.expo/
+node_modules/
+*.log
+
 # Native
 *.orig.*
 *.jks

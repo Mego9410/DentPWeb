@@ -9,6 +9,7 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.mego10.resellersuite",
       "supportsTablet": true,
       "jsEngine": "jsc"
     },
@@ -23,6 +24,12 @@
       "eas": {
         "projectId": "f65785d6-4835-4f67-bf36-89b191144c83"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f65785d6-4835-4f67-bf36-89b191144c83"
     }
   }
 }
