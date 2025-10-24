@@ -1,32 +1,40 @@
 
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, Text } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>ResellSnap</Text>
-      <Text style={styles.subtitle}>Etsy Integration</Text>
-      <StatusBar style="auto" />
+    <View style={{
+      flex: 1,
+      backgroundColor: 'white',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 20
+    }}>
+      <Text style={{
+        fontSize: 32,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'center',
+        marginBottom: 20
+      }}>
+        ResellSnap
+      </Text>
+      <Text style={{
+        fontSize: 18,
+        color: 'blue',
+        textAlign: 'center'
+      }}>
+        Etsy Integration
+      </Text>
+      <Text style={{
+        fontSize: 14,
+        color: 'green',
+        textAlign: 'center',
+        marginTop: 20
+      }}>
+        App is working!
+      </Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#000',
-    marginBottom: 10,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#666',
-  },
-});
