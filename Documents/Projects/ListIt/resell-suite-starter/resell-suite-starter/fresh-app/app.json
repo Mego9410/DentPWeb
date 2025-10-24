@@ -1,34 +1,29 @@
 {
   "expo": {
-    "name": "ResellSnap",
-    "slug": "reseller-suite",
+    "name": "fresh-app",
+    "slug": "fresh-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light",
     "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "bundleIdentifier": "com.mego10.resellsnap",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.mego10.resellsnap",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "edgeToEdgeEnabled": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "f65785d6-4835-4f67-bf36-89b191144c83"
-      }
     }
   }
 }
