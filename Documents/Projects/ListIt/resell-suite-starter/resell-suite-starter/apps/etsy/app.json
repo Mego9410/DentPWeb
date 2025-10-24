@@ -1,17 +1,19 @@
 {
   "expo": {
     "name": "ResellSnap",
-    "slug": "resellsnap",
+    "slug": "reseller-suite",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "sdkVersion": "51.0.0",
-    "platforms": ["ios", "android"],
     "ios": {
-      "bundleIdentifier": "com.mego10.resellsnap"
+      "bundleIdentifier": "com.mego10.resellsnap",
+      "supportsTablet": true
     },
     "android": {
-      "package": "com.mego10.resellsnap"
+      "package": "com.mego10.resellsnap",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
     },
     "extra": {
       "eas": {
